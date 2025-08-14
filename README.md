@@ -16,34 +16,33 @@ This is a solution to the [Bento grid challenge on Frontend Mentor](https://www.
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
+This is a practice project demonstrating the use of CSS Grid and Flexbox.
+
 ### The challenge
 
-Users should be able to:
-
-- View the optimal layout for the interface depending on their device's screen size
+To create a complex css grid
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![webpage screenshot](webpage-screenshot.jpg)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [The webpage](https://omarhazem02.github.io/bento-grid/)
 
 ## My process
+
+Analyzed the challenge’s design.
+
+Structured the HTML layout.
+
+Applied styling using CSS.
+
+Rebuilt the layout using CSS Grid for better control and organization.
 
 ### Built with
 
@@ -51,60 +50,73 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - CSS custom properties
 - Flexbox
 - CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
-To see how you can add code snippets, see below:
+I gained more experience with CSS Grid, especially in creating layouts using the grid-template-areas property.
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<article class="container">
+  <div class="creat-post-box">...</div>
+  <div class="social-media-box">...</div>
+  <div class="timings-box">...</div>
+  <div class="using-ai-box">...</div>
+  <div class="accounts-box">...</div>
+  <div class="schedule-box">...</div>
+  <div class="growth-box">...</div>
+  <div class="followers-box">...</div>
+</article>
+
 ```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 20%);
+  grid-template-areas:
+    "creat media media timings"
+    "creat accounts schedule timings"
+    "ai accounts schedule timings"
+    "ai growth followers followers";
+  gap: 20px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 80%;
 }
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+
+.creat-post-box { grid-area: creat; }
+.social-media-box { grid-area: media; }
+.timings-box { grid-area: timings; }
+.using-ai-box { grid-area: ai; }
+.accounts-box { grid-area: accounts; }
+.schedule-box { grid-area: schedule; }
+.growth-box { grid-area: growth; }
+.followers-box { grid-area: followers; }
+
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+This project took longer to complete because I’m not yet fully confident with CSS Grid. I plan to keep practicing and work on gaining a deeper understanding of how to structure and optimize layouts with it.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- MDN Web Docs helped me expand my knowledge on certain topics while creating this page..
+- Chat gpt Claude supported me as  mentors by helping evaluate and review my code throughout the project.
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Website - [Omar Hazem](https://www.linkedin.com/in/omar-hazem-aa287a273/)
+- Twitter - [@Omarhaz67778375](https://x.com/OmarHaz67778375)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+I would like to acknowledge AlMadersa, where I am currently studying in the Front-End Development Diploma program.
+Special thanks to my course tutor, Mohamed Abu Sarea (محمد أبو سريع), for his valuable guidance and support.
