@@ -139,7 +139,7 @@ body {
   position: relative;
 }
 .schedule-box p {
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 500;
   line-height: 1;
   letter-spacing: -2px;
@@ -180,7 +180,7 @@ body {
 }
 .followers-box p {
   color: white;
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 500;
   max-width: 200px;
   align-self: center;
